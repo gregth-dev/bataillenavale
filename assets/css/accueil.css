@@ -1,0 +1,105 @@
+span {
+    margin: 0;
+    padding: 0;
+}
+
+.end-left {
+    margin-left: -235px;
+}
+
+.end-right {
+    margin-right: -117.5px;
+}
+
+.outline {
+    position: absolute;
+    top: 20px;
+}
+
+.outline {
+    color: black;
+    -webkit-text-fill-color: transparent;
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #1C8AAC;
+    font-size: 64px;
+    font-family: 'Arvo', serif;
+}
+
+.orbs {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    display: block;
+    font-size: 128px;
+}
+
+.orbs span {
+    color: red;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    text-shadow: 0 0 20px #1C8AAC, 1px 1px 20px #1C8AAC, 2px 2px 20px #1C8AAC, -1px -1px 20px #1C8AAC, -2px -2px 20px #1C8AAC;
+    position: absolute;
+    left: 50%;
+}
+
+.orbs span:first-child {
+    margin-left: -210px;
+}
+
+.orbs span:not(:first-child) {
+    margin-left: -35px;
+}
+
+.glow {
+    opacity: 0;
+    font-family: 'Arvo', serif;
+    font-weight: 300;
+    color: #1C8AAC;
+    margin-left: -222.5px;
+    font-size: 105px;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+}
+
+.logo {
+    margin-left: -222.5px;
+    position: absolute;
+    top: 350px;
+    left: 58%;
+    opacity: 0;
+}
+
+.logo.change {
+    opacity: 1;
+    transition: all 1s;
+}
+
+.boutonAccueil {
+    opacity: 0;
+    width: 500px;
+    padding-top: 450px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.boutonAccueil.change {
+    opacity: 1;
+    transition: all 1s;
+}
+
+.boutonAccueil button {
+    width: 115px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+    font-family: 'Arvo', serif;
+    font-weight: 300;
+}
+
+
+

@@ -1,0 +1,674 @@
+/*GRILLES DE JEU*/
+
+.displayNone {
+  display: none;
+}
+
+.displayBlock {
+  display: block;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#player2 {
+  cursor: url("/assets/img/cible.ico"), auto;
+}
+
+#gameGrid {
+  padding: 50px;
+  background-size: cover;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  -webkit-box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.75);
+  background-color: rgba(255, 255, 255, 0.336);
+}
+
+.reduce {
+  width: 25px;
+  height: 25px;
+  font-size: 15px;
+}
+
+th {
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+td {
+  width: 50px;
+  height: 50px;
+  border: 0.01em solid white;
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-shadow: black 2px 2px 2px;
+}
+
+/*MENU DE JEU*/
+
+#menuGame {
+  margin-top: 50px;
+  min-height: 110px;
+}
+
+#menuGame p {
+  padding-top: 10px;
+  margin-bottom: 10px;
+  width: 270px;
+  min-height: 70px;
+  text-align: center;
+}
+
+#menuGame img {
+  font-size: 0;
+}
+
+#menuGame button, select {
+  cursor: pointer;
+  width: 260px;
+  min-height: 30px;
+  border: 2px #1C8AAC solid;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#delMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#delButton {
+  padding: 4px 1px 1px 1px;
+  border-radius: 4px;
+  font-size: 0;
+}
+
+.del {
+  border: 3px solid green;
+  -webkit-box-shadow: 0px 1px 5px 3px rgba(252, 248, 248, 0.712);
+  -moz-box-shadow: 0px 1px 5px 3px rgba(252, 248, 248, 0.712);
+  box-shadow: 0px 1px 5px 3px rgba(252, 248, 248, 0.712);
+}
+
+.delPress {
+  border: red 3px solid;
+}
+
+.multiplayer {
+  text-align: center;
+  margin: 10px auto;
+}
+
+/* Radial Out */
+
+.hvr-radial-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+  background: #e1e1e1;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.hvr-radial-out:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1C8AAC;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-radial-out:hover, .hvr-radial-out:focus, .hvr-radial-out:active {
+  color: white;
+}
+
+.hvr-radial-out:hover:before, .hvr-radial-out:focus:before, .hvr-radial-out:active:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
+
+/*CONTAINER INFOS*/
+
+.container-info {
+  padding: 10px;
+  width: 350px;
+}
+
+#animation {
+  width: 200px;
+  max-height: 100px;
+  -webkit-box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.75);
+  margin: 0 auto;
+  text-align: center;
+}
+
+#score {
+  font-size: 25px;
+  padding-top: 20px;
+  width: 200px;
+  min-height: 100px;
+  -webkit-text-shadow: 1px 5px 3px rgba(0, 0, 0, 0.75);
+  -moz-text-shadow: 1px 5px 3px rgba(0, 0, 0, 0.75);
+  text-shadow: 1px 5px 3px rgba(0, 0, 0, 0.75);
+  margin: 0 auto;
+  text-align: center;
+}
+
+#infoGame {
+  font-size: 20px;
+  width: 200px;
+  min-height: 100px;
+  -webkit-text-shadow: 1px 5px 3px rgba(0, 0, 0, 0.75);
+  -moz-text-shadow: 1px 5px 3px rgba(0, 0, 0, 0.75);
+  text-shadow: 1px 5px 3px rgba(0, 0, 0, 0.75);
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10px;
+}
+
+form {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#infoScore button {
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  min-height: 30px;
+  border: 2px #1C8AAC solid;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.grey {
+  background-color: #f1f4f8;
+}
+
+#speaker {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  min-height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.75);
+  margin-bottom: 10px;
+  border: 3px solid black;
+}
+
+#speaker:hover {
+  border: 3px solid white;
+}
+
+.ready {
+  -webkit-box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.75);
+  background-color: rgba(255, 255, 255, 0.336);
+  margin: 0 auto;
+  display: block;
+}
+
+.reduce button{
+  cursor: pointer;
+  display: block;
+  margin: 10px auto;
+  width: 200px;
+  min-height: 30px;
+  border: 2px #1C8AAC solid;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/*Animations et images du jeu*/
+
+#powers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.powersPlayer {
+  width: 50px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.power {
+  padding: 3px;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.75);
+}
+
+.powerSelect {
+  border: white 3px solid;
+}
+
+.powerOn {
+  border: green 3px solid;
+}
+
+.powerOff {
+  border: red 3px solid;
+}
+
+.cible {
+  background-image: url("/assets/img/cible.png") !important;
+}
+
+.cibleReduce {
+  background-image: url("/assets/img/ciblereduce.png") !important;
+}
+
+.megaBomb {
+  background: url("/assets/img/megabomb.gif") no-repeat;
+  background-size: cover;
+}
+
+.bombing-1 {
+  background: url("/assets/img/bombing-1.gif") no-repeat;
+  background-size: cover;
+}
+
+.bombing-2 {
+  background: url("/assets/img/bombing-2.gif") no-repeat;
+  background-size: cover;
+}
+
+.missile-2 {
+  background: url("/assets/img/missile-2.gif") no-repeat;
+  background-size: cover;
+}
+
+.missile-1 {
+  background: url("/assets/img/missile-1.gif") no-repeat;
+  background-size: cover;
+}
+
+.splash {
+  background-image: url("/assets/img/missSplash.gif");
+}
+
+.splashReduce {
+  background-image: url("/assets/img/missSplashreduce.gif");
+}
+
+.boat-down {
+  background: url("/assets/img/boatDown.gif") no-repeat;
+  background-size: cover;
+}
+
+.ia-victory {
+  background: url("/assets/img/victoryIa.gif") no-repeat;
+  background-size: cover;
+}
+
+.boatDown {
+  background: url("/assets/img/boatDown.gif") no-repeat;
+  background-size: cover;
+}
+
+.player-victory {
+  background: url("/assets/img/victoryPlayer.gif") no-repeat;
+  background-size: cover;
+}
+
+.player-lose {
+  background: url("/assets/img/gameOver.gif") no-repeat;
+  background-size: cover;
+}
+
+/* Background bateau porteAvions */
+
+.porteAvions0-1 {
+  background: url("/assets/img/porteAvions/porteAvions0-1.png");
+}
+
+.porteAvions1-1 {
+  background: url("/assets/img/porteAvions/porteAvions1-1.png");
+}
+
+.porteAvions2-1 {
+  background: url("/assets/img/porteAvions/porteAvions2-1.png");
+}
+
+.porteAvions3-1 {
+  background: url("/assets/img/porteAvions/porteAvions3-1.png");
+}
+
+.porteAvions4-1 {
+  background: url("/assets/img/porteAvions/porteAvions4-1.png");
+}
+
+.porteAvions0-2 {
+  background: url("/assets/img/porteAvions/porteAvions0-2.png");
+}
+
+.porteAvions1-2 {
+  background: url("/assets/img/porteAvions/porteAvions1-2.png");
+}
+
+.porteAvions2-2 {
+  background: url("/assets/img/porteAvions/porteAvions2-2.png");
+}
+
+.porteAvions3-2 {
+  background: url("/assets/img/porteAvions/porteAvions3-2.png");
+}
+
+.porteAvions4-2 {
+  background: url("/assets/img/porteAvions/porteAvions4-2.png");
+}
+
+/* Background bateau croiseur */
+
+.croiseur0-1 {
+  background: url("/assets/img/croiseur/croiseur0-1.png");
+}
+
+.croiseur1-1 {
+  background: url("/assets/img/croiseur/croiseur1-1.png");
+}
+
+.croiseur2-1 {
+  background: url("/assets/img/croiseur/croiseur2-1.png");
+}
+
+.croiseur3-1 {
+  background: url("/assets/img/croiseur/croiseur3-1.png");
+}
+
+.croiseur0-2 {
+  background: url("/assets/img/croiseur/croiseur0-2.png");
+}
+
+.croiseur1-2 {
+  background: url("/assets/img/croiseur/croiseur1-2.png");
+}
+
+.croiseur2-2 {
+  background: url("/assets/img/croiseur/croiseur2-2.png");
+}
+
+.croiseur3-2 {
+  background: url("/assets/img/croiseur/croiseur3-2.png");
+}
+
+/* Background bateau contreTorpilleur */
+
+.contreTorpilleur0-1 {
+  background: url("/assets/img/contreTorpilleur/contreTorpilleur0-1.png");
+}
+
+.contreTorpilleur1-1 {
+  background: url("/assets/img/contreTorpilleur/contreTorpilleur1-1.png");
+}
+
+.contreTorpilleur2-1 {
+  background: url("/assets/img/contreTorpilleur/contreTorpilleur2-1.png");
+}
+
+.contreTorpilleur0-2 {
+  background: url("/assets/img/contreTorpilleur/contreTorpilleur0-2.png");
+}
+
+.contreTorpilleur1-2 {
+  background: url("/assets/img/contreTorpilleur/contreTorpilleur1-2.png");
+}
+
+.contreTorpilleur2-2 {
+  background: url("/assets/img/contreTorpilleur/contreTorpilleur2-2.png");
+}
+
+/* Background bateau sousMarin */
+
+.sousMarin0-1 {
+  background: url("/assets/img/sousMarin/sousMarin0-1.png");
+}
+
+.sousMarin1-1 {
+  background: url("/assets/img/sousMarin/sousMarin1-1.png");
+}
+
+.sousMarin2-1 {
+  background: url("/assets/img/sousMarin/sousMarin2-1.png");
+}
+
+.sousMarin0-2 {
+  background: url("/assets/img/sousMarin/sousMarin0-2.png");
+}
+
+.sousMarin1-2 {
+  background: url("/assets/img/sousMarin/sousMarin1-2.png");
+}
+
+.sousMarin2-2 {
+  background: url("/assets/img/sousMarin/sousMarin2-2.png");
+}
+
+/* Background bateau torpilleur */
+
+.torpilleur0-1 {
+  background: url("/assets/img/torpilleur/torpilleur0-1.png");
+}
+
+.torpilleur1-1 {
+  background: url("/assets/img/torpilleur/torpilleur1-1.png");
+}
+
+.torpilleur0-2 {
+  background: url("/assets/img/torpilleur/torpilleur0-2.png");
+}
+
+.torpilleur1-2 {
+  background: url("/assets/img/torpilleur/torpilleur1-2.png");
+}
+/* Background bateau porteAvions */
+
+.porteAvions0-1reduce  {
+  background: url("/assets/img/porteAvions/porteAvions0-1reduce.png");
+}
+
+.porteAvions1-1reduce {
+  background: url("/assets/img/porteAvions/porteAvions1-1reduce.png");
+}
+
+.porteAvions2-1reduce {
+  background: url("/assets/img/porteAvions/porteAvions2-1reduce.png");
+}
+
+.porteAvions3-1reduce {
+  background: url("/assets/img/porteAvions/porteAvions3-1reduce.png");
+}
+
+.porteAvions4-1reduce {
+  background: url("/assets/img/porteAvions/porteAvions4-1reduce.png");
+}
+
+.porteAvions0-2reduce {
+  background: url("/assets/img/porteAvions/porteAvions0-2reduce.png");
+}
+
+.porteAvions1-2reduce {
+  background: url("/assets/img/porteAvions/porteAvions1-2reduce.png");
+}
+
+.porteAvions2-2reduce {
+  background: url("/assets/img/porteAvions/porteAvions2-2reduce.png");
+}
+
+.porteAvions3-2reduce {
+  background: url("/assets/img/porteAvions/porteAvions3-2reduce.png");
+}
+
+.porteAvions4-2reduce {
+  background: url("/assets/img/porteAvions/porteAvions4-2reduce.png");
+}
+
+/* Background bateau croiseur */
+
+.croiseur0-1reduce {
+  background: url("/assets/img/croiseur/croiseur0-1reduce.png");
+}
+
+.croiseur1-1reduce {
+  background: url("/assets/img/croiseur/croiseur1-1reduce.png");
+}
+
+.croiseur2-1reduce {
+  background: url("/assets/img/croiseur/croiseur2-1reduce.png");
+}
+
+.croiseur3-1reduce {
+  background: url("/assets/img/croiseur/croiseur3-1reduce.png");
+}
+
+.croiseur0-2reduce {
+  background: url("/assets/img/croiseur/croiseur0-2reduce.png");
+}
+
+.croiseur1-2reduce {
+  background: url("/assets/img/croiseur/croiseur1-2reduce.png");
+}
+
+.croiseur2-2reduce {
+  background: url("/assets/img/croiseur/croiseur2-2reduce.png");
+}
+
+.croiseur3-2reduce {
+  background: url("/assets/img/croiseur/croiseur3-2reduce.png");
+}
+
+/* Background bateau contreTorpilleur */
+
+.contreTorpilleur0-1reduce {
+  background: url("/assets/img/contreTorpilleur/contreTorpilleur0-1reduce.png");
+}
+
+.contreTorpilleur1-1reduce {
+  background: url("/assets/img/contreTorpilleur/contreTorpilleur1-1reduce.png");
+}
+
+.contreTorpilleur2-1reduce {
+  background: url("/assets/img/contreTorpilleur/contreTorpilleur2-1reduce.png");
+}
+
+.contreTorpilleur0-2reduce {
+  background: url("/assets/img/contreTorpilleur/contreTorpilleur0-2reduce.png");
+}
+
+.contreTorpilleur1-2reduce {
+  background: url("/assets/img/contreTorpilleur/contreTorpilleur1-2reduce.png");
+}
+
+.contreTorpilleur2-2reduce {
+  background: url("/assets/img/contreTorpilleur/contreTorpilleur2-2reduce.png");
+}
+
+/* Background bateau sousMarin */
+
+.sousMarin0-1reduce {
+  background: url("/assets/img/sousMarin/sousMarin0-1reduce.png");
+}
+
+.sousMarin1-1reduce {
+  background: url("/assets/img/sousMarin/sousMarin1-1reduce.png");
+}
+
+.sousMarin2-1reduce {
+  background: url("/assets/img/sousMarin/sousMarin2-1reduce.png");
+}
+
+.sousMarin0-2reduce {
+  background: url("/assets/img/sousMarin/sousMarin0-2reduce.png");
+}
+
+.sousMarin1-2reduce {
+  background: url("/assets/img/sousMarin/sousMarin1-2reduce.png");
+}
+
+.sousMarin2-2reduce {
+  background: url("/assets/img/sousMarin/sousMarin2-2reduce.png");
+}
+
+/* Background bateau torpilleur */
+
+.torpilleur0-1reduce {
+  background: url("/assets/img/torpilleur/torpilleur0-1reduce.png");
+}
+
+.torpilleur1-1reduce {
+  background: url("/assets/img/torpilleur/torpilleur1-1reduce.png");
+}
+
+.torpilleur0-2reduce {
+  background: url("/assets/img/torpilleur/torpilleur0-2reduce.png");
+}
+
+.torpilleur1-2reduce {
+  background: url("/assets/img/torpilleur/torpilleur1-2reduce.png");
+}

@@ -1,0 +1,637 @@
+* {
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+nav a {
+    color: white;
+}
+
+body {
+    background: black;
+    color: white;
+    font-family: 'Arvo', serif;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* NAV */
+
+.nav-item {
+    margin: 0 10px;
+}
+
+nav {
+    width: 95%;
+    margin: 0 auto;
+}
+
+nav button {
+    width: 130px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+    font-family: 'Arvo', serif;
+    font-weight: 300;
+}
+
+#navButtons {
+    width: 50%;
+    align-items: center;
+}
+
+#navButtonsSession {
+    width: 20%;
+    align-items: center;
+}
+
+/* Underline From Center */
+
+.hvr-underline {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr-underline:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #1C8AAC;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-underline:hover:before, .hvr-underline:focus:before, .hvr-underline:active:before {
+    left: 0;
+    right: 0;
+}
+
+/** LOADING ICON **/
+
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('/assets/img/Preloader_3.gif') center no-repeat #fff;
+}
+
+/*REGLES DU JEU*/
+
+.reglesdujeu p {
+    margin: 10px auto;
+    padding: 20px;
+}
+
+.reglesdujeu h1 {
+    text-align: center;
+    padding: 30px;
+}
+
+.reglesdujeu h3 {
+    padding: 20px;
+    text-align: center;
+    color: #1C8AAC
+}
+
+/*INSTALLATION DES BATEAUX*/
+
+.installation-boat h1 {
+    text-align: center;
+    padding: 30px;
+}
+
+.installation-boat div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+
+.installation-boat ul {
+    width: 310px;
+    padding: 10px;
+}
+
+.installation-boat video {
+    -webkit-box-shadow: 2px 0px 20px 5px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 2px 0px 20px 5px rgba(255, 255, 255, 1);
+    box-shadow: 2px 0px 20px 5px rgba(255, 255, 255, 1);
+}
+
+/*INSTALLATION DES BATEAUX*/
+
+.multijoueur h1 {
+    text-align: center;
+    padding: 30px;
+}
+
+.multijoueur div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+
+.multijoueur ul {
+    width: 310px;
+    padding: 10px;
+}
+
+.multijoueur video {
+    -webkit-box-shadow: 2px 0px 20px 5px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 2px 0px 20px 5px rgba(255, 255, 255, 1);
+    box-shadow: 2px 0px 20px 5px rgba(255, 255, 255, 1);
+}
+
+/*INSTALLATION DES BATEAUX*/
+
+.powers h1 {
+    text-align: center;
+    padding: 30px;
+}
+
+.powers div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+
+.powers ul {
+    width: 310px;
+    padding: 30px;
+}
+
+.powers li {
+    padding: 10px;
+    text-align: center;
+}
+
+.powers video {
+    -webkit-box-shadow: 2px 0px 20px 5px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 2px 0px 20px 5px rgba(255, 255, 255, 1);
+    box-shadow: 2px 0px 20px 5px rgba(255, 255, 255, 1);
+}
+
+.powersbutton {
+    width: 60px;
+    padding: 3px;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.75);
+    border: green 3px solid;
+}
+
+/*CONNEXION*/
+
+.connexion h1 {
+    text-align: center;
+    padding: 30px;
+}
+
+.connexion form {
+    padding: 30px;
+}
+
+.connexion p {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.connexion p a {
+    text-decoration: none;
+}
+
+/*INSCRIPTION*/
+
+.inscription h1 {
+    text-align: center;
+    padding: 30px;
+}
+
+.inscription form {
+    padding: 30px;
+}
+
+.message[data="success"] {
+    width: 300px;
+    min-height: 30px;
+    color: #fff;
+    background-color: rgb(53, 172, 53);
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.message[data="error"] {
+    width: 300px;
+    min-height: 30px;
+    color: #fff;
+    background-color: rgb(172, 53, 53);
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.message[data=""] {
+    width: 300px;
+    min-height: 50px;
+    color: #fff;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px auto;
+    opacity: 0;
+}
+
+/*PROFIL*/
+
+.profil-avatars {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 650px;
+}
+
+.profil-text {
+    width: 325px;
+}
+
+.profil-text button {
+    padding: 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 60px;
+}
+
+.profil-content {
+    display: flex;
+    justify-content: space-around;
+    width: 650px;
+}
+
+.profil .form {
+    padding: 30px;
+}
+
+.profil .form div {
+    padding: 10px;
+}
+
+/*MEILLEURS SCORES*/
+
+.meilleurscore table {
+    width: 600px;
+}
+
+.meilleurscore h1 {
+    text-align: center;
+    padding: 30px;
+}
+
+.meilleurscore {
+    font-size: 20px;
+}
+
+/*UPDATE AVATARS*/
+
+.updateAvatar table {
+    width: 600px;
+}
+
+.updateAvatar h1 {
+    text-align: center;
+    padding: 30px;
+}
+
+.updateAvatar {
+    font-size: 20px;
+}
+
+.updateAvatar input {
+    cursor: pointer;
+}
+
+.updateAvatar #thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto 10px auto;
+    min-height: 55px;
+    width: 55px;
+    border: 2px white dashed;
+}
+
+/*Partie Multijoueur*/
+
+#connected {
+    min-height: 500px;
+}
+
+#connected th, #connected td {
+    font-size: 20px;
+}
+
+#connected .userOnline {
+    text-decoration: none;
+    color: white;
+}
+
+#chat {
+    min-height: 500px;
+}
+
+/***CHAT*******/
+
+.chat-list {
+    padding: 0;
+    font-size: .8rem;
+}
+
+.chat-list li {
+    margin-bottom: 10px;
+    overflow: auto;
+    color: #ffffff;
+}
+
+.chat-list .chat-img {
+    float: left;
+    width: 48px;
+}
+
+.chat-list .chat-img img {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 100%;
+}
+
+.chat-list .chat-message {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background: #78e08f;
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.chat-list .chat-message:before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    width: 0;
+    height: 0;
+}
+
+.chat-list .chat-message h5 {
+    margin: 0 0 5px 0;
+    font-weight: 600;
+    line-height: 100%;
+    font-size: .9rem;
+}
+
+.chat-list .chat-message p {
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-list .chat-body {
+    margin-left: 20px;
+    float: left;
+    width: 70%;
+}
+
+.chat-list .in .chat-message:before {
+    left: -12px;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid #78e08f;
+}
+
+.chat-list .out .chat-img {
+    float: right;
+}
+
+.chat-list .out .chat-body {
+    float: right;
+    margin-right: 20px;
+    text-align: right;
+}
+
+.chat-list .out .chat-message {
+    background: #82ccdd;
+}
+
+.chat-list .out .chat-message:before {
+    right: -12px;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #82ccdd;
+}
+
+.card .card-header:first-child {
+    -webkit-border-radius: 0.3rem 0.3rem 0 0;
+    -moz-border-radius: 0.3rem 0.3rem 0 0;
+    border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.card .card-body {
+    background-color: #7F7FD5;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.card .card-bodyMulti {
+    background-color: #7F7FD5;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.card .card-header {
+    background: #17202b;
+    border: 0;
+    font-size: 1rem;
+    padding: .65rem 1rem;
+    position: relative;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.content {
+    margin-top: 40px;
+}
+
+#formChat {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+}
+
+#formChat input {
+    margin-right: 10px;
+}
+
+i {
+    font-size: 20px;
+}
+
+.chatNone {
+    display: none;
+}
+
+.chatDisplay {
+    display: block;
+}
+
+.chat-button {
+    cursor: pointer;
+    width: 100px;
+    min-height: 30px;
+    border: 2px #1C8AAC solid;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 80px;
+    right: 28px;
+    z-index: 99999;
+}
+
+#chatMulti {
+    position: fixed;
+    bottom: 117px;
+    right: 10px;
+    z-index: 99999;
+}
+
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+}
+
+.badgeOnline {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+}
+
+.online-button {
+    cursor: pointer;
+    width: 100px;
+    min-height: 30px;
+    border: 2px #1C8AAC solid;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 80px;
+    right: 138px;
+    z-index: 99999;
+}
+
+#onlinePopup {
+    position: fixed;
+    bottom: 117px;
+    right: 130px;
+    z-index: 99999;
+}
+
+#onlinePopup {
+    width: 10%;
+    border-radius: 5px;
+}
+
+/*CHARTE*/
+
+.charte p {
+    padding: 10px;
+}
+
+/*FOOTER*/
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.links {
+    margin: 0 auto;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 50px;
+    text-align: center;
+}
+
+footer div a {
+    color: white;
+}
+
+/*CONTACT*/
+
+#contact-form button, #inscription-form button {
+    display: block;
+    margin: 0 auto;
+}
