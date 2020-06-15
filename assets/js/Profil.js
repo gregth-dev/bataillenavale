@@ -9,6 +9,7 @@ class Profil {
         this.email = email;
         this.password = password;
         this.newPassword = newPassword;
+        this.formValidator = new FormValidator();
     }
 
     /**
@@ -61,7 +62,7 @@ class Profil {
             .then(obj => {
                 if (!obj.value) {
                     this.messageInfo.displayMessageInfo(obj.message, "error");
-                    formValidator.passwordValidator(password, 'Mot de passe invalide');
+                    this.formValidator.setInvalidField(password, 'Mot de passe invalide');
                 }
                 else
                     window.location.replace("/");

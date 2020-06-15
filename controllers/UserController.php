@@ -280,12 +280,13 @@ final class UserController
 
     /**
      * Affiche la vue de restauration du mot de passe.
+     * POST user/resetmdp
      * @param array $params Contient la clé de restauration.
      * @return void
      */
     public static function resetmdp(array $params): void
     {
-        if ($user = User::getUserSession())
+        if (!$user = User::getUserSession())
             Router::redirect('/');
         else {
             $restoreCode = filter_var($params['restoreCode'], FILTER_SANITIZE_STRING);
@@ -319,8 +320,8 @@ final class UserController
     }
 
     /**
-     * Affiche la vue de gestion des utilisateurs.
-     * @param array $params Contient la liste des utilisateurs.
+     * Affiche la vue de gestion des utilisateurs pour l'administrateur.
+     * GET user/updateUsers
      * @return void
      */
     public static function updateUsers(): void
@@ -358,7 +359,7 @@ final class UserController
 
     /**
      * Affiche la vue de gestion des avatars.
-     * @param array $params Contient la liste des avatars.
+     * GET user/updateAvatars
      * @return void
      */
     public static function updateAvatars(): void
@@ -433,7 +434,6 @@ final class UserController
 
     /**
      * Charge la liste des utilisateurs en ligne.
-     * @param array $params Contient la liste des users en ligne.
      * @return void
      */
     public static function onlineUsers(): void

@@ -332,6 +332,9 @@ class User extends ORMDB implements UserLoggable
 
 	/**
 	 * Vérifie le mail et crée les données de récupération du mot de passe.
+	 *
+	 * @param array|null $errors Tableau d'erreur
+	 * @return boolean True si la création du code c'est bien passé, false sinon.
 	 */
 	public function createRecupMdp(?array &$errors = null): bool
 	{
@@ -360,6 +363,10 @@ class User extends ORMDB implements UserLoggable
 
 	/**
 	 * Vérifie les données de récupération du mot de passe.
+	 *
+	 * @param object|null $obj
+	 * @param array|null $errors Tableau d'erreurs
+	 * @return boolean
 	 */
 	public function validateRestoreCode(?object $obj = null, ?array &$errors = null): bool
 	{

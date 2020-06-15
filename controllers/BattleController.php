@@ -29,6 +29,7 @@ final class BattleController
 
     /**
      * Affiche la vue des parties Multijoueur.
+     * GET battle/partieMultijoueur
      * @return void
      */
     public static function partieMultijoueur(): void
@@ -69,6 +70,7 @@ final class BattleController
 
     /**
      * Enregistre en BDD la demande d'une partie multijoueur.
+     * POST battle/launchBattle
      * @return void
      */
     public static function launchBattle(): void
@@ -89,6 +91,7 @@ final class BattleController
 
     /**
      * Regarde en BDD si le joueur à répondu à l'invitation.
+     * GET battle/listenResponse
      * @return void
      */
     public static function listenResponse(): void
@@ -112,7 +115,8 @@ final class BattleController
     }
 
     /**
-     * Regarde en BDD si le joueur à réçu une inivitation à une partie multijoueur.
+     * Regarde en BDD si le joueur à réçu une invitation à une partie multijoueur.
+     * GET battle/listenDemand
      * @return void
      */
     public static function listenDemand(): void
@@ -135,6 +139,7 @@ final class BattleController
 
     /**
      * Enregistre en BDD la réponse du joueur qui à réçu l'invitation.
+     * POST /battle/responseLaunch
      * @return void
      */
     public static function responseLaunch(): void
@@ -169,6 +174,7 @@ final class BattleController
 
     /**
      * Affiche la vue de la partie multijoueur.
+     * GET battle/gameMultijoueur/([0-9]+)
      * @param array|null $params Tableau associatif des paramètres.
      * @return void
      */
@@ -213,6 +219,7 @@ final class BattleController
 
     /**
      * Retourne les données de la table battle.
+     * GET battle/getBattles
      * @return void
      */
     public static function getBattles(): void
@@ -232,6 +239,7 @@ final class BattleController
 
     /**
      * Enregistre en BDD la valeur de ready de l'utilisateur.
+     * POST battle/postReady
      * @return void
      */
     public static function postReady(): void
@@ -247,7 +255,8 @@ final class BattleController
     }
 
     /**
-     * Enregistre en BDD la valeur de target "touh" ou "miss" de l'utilisateur.
+     * Enregistre en BDD la valeur de target "touch" ou "miss" de l'utilisateur.
+     * POST battle/postTarget
      * @return void
      */
     public static function postTarget(): void

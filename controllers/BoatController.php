@@ -14,7 +14,7 @@ final class BoatController
 {
     /**
      * Enregistre la position des bateaux en BDD.(mode multijoueur uniquement)
-     * POST battle/postBoat
+     * POST boat/postBoat
      * @return void
      */
     public static function postBoat(): void
@@ -37,7 +37,7 @@ final class BoatController
 
     /**
      * Récupère la position des bateaux en BDD.(mode multijoueur uniquement)
-     * POST battle/getBoat
+     * GET boat/getBoats
      * @return void
      */
     public static function getBoats(): void
@@ -52,7 +52,7 @@ final class BoatController
 
     /**
      * Supprime tous les bateaux associés au joueur.
-     * POST battle/deleteBoats
+     * POST boat/deleteBoats
      * @return void
      */
     public static function deleteBoats(): void
