@@ -59,8 +59,10 @@ class Profil {
         fetch('/user/deleteProfil', init)
             .then(response => response.ok ? response.json() : Promise.reject(new Error("Invalid response")))
             .then(obj => {
-                if (!obj.value)
+                if (!obj.value) {
                     this.messageInfo.displayMessageInfo(obj.message, "error");
+                    formValidator.passwordValidator(password, 'Mot de passe invalide');
+                }
                 else
                     window.location.replace("/");
             })

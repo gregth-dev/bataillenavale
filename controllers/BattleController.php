@@ -19,7 +19,7 @@ final class BattleController
 {
 
     /**
-     * Renvoie la vue Game 1 seul joueur.
+     * Affiche la vue Game 1 seul joueur.
      * @return void
      */
     public static function gameOne(): void

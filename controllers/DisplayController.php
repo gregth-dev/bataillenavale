@@ -32,7 +32,7 @@ final class DisplayController
     }
 
     /**
-     * Affiche la vue installation des bateaux.
+     * Affiche la vue d'aide sur l'installation des bateaux.
      * GET help/installation
      * @return void
      */
@@ -42,7 +42,7 @@ final class DisplayController
     }
 
     /**
-     * Affiche la vue sur les attaques spéciales.
+     * Affiche la vue d'aide sur les attaques spéciales.
      * GET help/attaques
      * @return void
      */
@@ -52,7 +52,7 @@ final class DisplayController
     }
 
     /**
-     * Affiche la vue sur les parties multijoueur.
+     * Affiche la vue d'aide sur la création des parties multijoueur.
      * GET help/multijoueur
      * @return void
      */
