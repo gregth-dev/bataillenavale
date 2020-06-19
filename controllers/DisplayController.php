@@ -72,6 +72,16 @@ final class DisplayController
     }
 
     /**
+     * Affiche la vue des credits du site.
+     * GET /credits
+     * @return void
+     */
+    public static function credits(): void
+    {
+        Router::render(Cfg::get('credits'));
+    }
+
+    /**
      * Affiche la vue contact du site.
      * GET /contact
      * @return void

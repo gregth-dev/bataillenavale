@@ -12,7 +12,7 @@ use entities\User;
     <section>
         <div id="menuGame" class="flex-around">
             <div>
-                <button class="hvr-radial-out" id="autoPosition">Placement automatique</button>
+                <button class="hvr-radial-out" id="autoPosition"><i class="fas fa-magic"></i> Placement automatique</button>
             </div>
             <div>
                 <select name="boat" id="selectBoat" onchange="selectBoat()">
@@ -29,7 +29,12 @@ use entities\User;
                 <p>Supprimer le bateau</p>
             </div>
             <div>
-                <a href="/battle/gameOne"><button class="hvr-radial-out" id="newGame">Nouvelle Partie</button></a>
+                <a href="/battle/gameOne">
+                    <button class="hvr-radial-out" id="newGame">
+                        <i class="fas fa-redo"></i>
+                        Nouvelle Partie
+                    </button>
+                </a>
             </div>
         </div>
     </section>
